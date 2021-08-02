@@ -1,0 +1,5 @@
+import React from "react";
+
+const Banana = () => <div>Nice banana 🍌</div>;
+
+export default Banana;
