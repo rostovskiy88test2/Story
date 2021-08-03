@@ -1,0 +1,2 @@
+const [description, setDescription] = useState("");
+      const input = document.getElementById("input");
