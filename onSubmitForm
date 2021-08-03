@@ -1,0 +1,23 @@
+const onSubmitForm = async (e) => {
+    e.preventDefault();
+    try {
+      const body = { description };
+
+      if (!input) {
+        console.log("Enter your text, please.");
+        alert("Enter your text, please.");
+      } else {
+        const response = await fetch("http://localhost:5000/todos", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        });
+
+        // console.log(response);
+        input.value = "";
+        window.location = "/";
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
